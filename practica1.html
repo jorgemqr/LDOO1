@@ -1,0 +1,43 @@
+<!doctype>
+<html>
+  <head>
+	<meta charset="UTF-8"/>
+    <script>
+      function funcion() {
+        var campoNombre = document.getElementById("nombre").value;
+		var campoPrimerapellido = document.getElementById("primerApellido").value;
+		var campoSegundoapellido = document.getElementById("segundoApellido").value;
+		var concatenar = campoNombre + campoPrimerapellido + campoSegundoapellido; 
+
+		document.getElementById("label-resultado").innerHTML = concatenar;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Personas</h1>
+
+    <!-- Sección captura -->
+    <div>
+      <h2>Captura</h2>
+      <p>
+        <label>Nombre: </label> <input type="text" id="nombre" />
+      </p>
+	  <p>
+		<label>Primer apellido:</label> <input type="text" id="primerApellido" />
+	  </p>
+	  <p>
+		<label>Segundo apellido: </label> <input type= "text" id="segundoApellido" />
+		</p>
+      <p>
+        <button onclick="funcion();">Enviar</button>
+      </p>
+    </div>
+
+    <div>
+      <h2>Resultados</h2>
+      <p>
+        Texto: <label id="label-resultado"></label>
+      </p>
+    </div>
+  </body>
+</html>
